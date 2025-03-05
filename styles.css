@@ -1,0 +1,381 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6347;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        display: none;
+        background: #444;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Home Section */
+#home {
+    background: url('https://wallpaperaccess.com/full/1947431.jpg') no-repeat center center/cover;
+    color: #020000;
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#home::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.654);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#home h2, #home p, #home .btn {
+    position: relative;
+    z-index: 2;
+}
+
+#home h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#home p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#home .btn {
+    background: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#home .btn:hover {
+    background: #e5533b;
+}
+.social-links {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #0073b1; /* LinkedIn color */
+}
+
+/* About Section */
+#about {
+    padding: 50px 20px;
+    background: #f4f4f9;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 160px;
+    height: 170px;
+    margin: 0 20px 20px;
+    object-fit: cover;
+    border: 4px solid #ff6347;
+    margin-right: 10%;
+
+}
+
+
+.about-content p {
+    max-width: 600px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.journey-image{
+    border-radius: 0%;
+    width: 160px;
+    height: 170px;
+    margin: 0 20px 20px;
+    object-fit: cover;
+    border: 4px solid #f8f5f4;
+    margin-right: 10%;
+    
+}
+
+
+/* Skillset Section */
+.skillset {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.skillset h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    text-align: center;
+    width: 100px;
+    color: #555;
+}
+
+.skill i {
+    font-size: 40px;
+    color: #ff6347;
+    transition: transform 0.3s;
+}
+
+.skill span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.skill:hover i {
+    transform: scale(1.2);
+    color: #e5533b;
+}
+
+/* Projects Section */
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.project {
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    max-width: 300px;
+    display: inline-block;
+    text-align: left;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.project h3 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.project p {
+    color: #666;
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.project a {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.project a:hover {
+    color: #e5533b;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .project {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        max-width: 90%;
+    }
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    background: #f4f4f9;
+    text-align: center;
+}
+.social-links {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #0073b1; /* LinkedIn color */
+}
+
+#contact form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contact button {
+    background: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contact button:hover {
+    background: #e5533b;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
